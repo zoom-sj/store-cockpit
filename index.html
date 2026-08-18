@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>辉达惠瑞 · 全店运营管理工作台</title>
+<link rel="stylesheet" href="assets/app.css">
+<link rel="stylesheet" href="assets/login.css">
+<script src="assets/deploy.config.js"></script>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="side-hd">
+      <div class="logo">
+        <div class="logo-mk">辉达</div>
+        <div class="logo-tx"><b>全店运营管理工作台</b><span>惠州市辉达惠瑞汽车有限公司</span></div>
+      </div>
+    </div>
+    <div class="side-bd" id="nav"></div>
+  </aside>
+
+  <main class="main">
+    <header class="top">
+      <div class="crumb" id="crumb"></div>
+      <div class="top-right" id="topInfo"></div>
+    </header>
+    <div class="dquery" id="dquery">
+      <span class="dq-label">查询区间</span>
+      <input type="date" id="dqStart" class="dq-in" title="起始日期（年/月/日）">
+      <span class="dq-sep">—</span>
+      <input type="date" id="dqEnd" class="dq-in" title="结束日期（年/月/日）">
+      <button class="dq-btn primary" id="dqQuery">确认查询</button>
+      <button class="dq-btn ghost" data-preset="mtd">本月</button>
+      <button class="dq-btn ghost" data-preset="q">本季</button>
+      <button class="dq-btn ghost" data-preset="y">本年</button>
+      <button class="dq-btn ghost" data-preset="30">近30天</button>
+      <button class="dq-btn ghost" data-preset="90">近90天</button>
+      <span class="dq-cur" id="dqCur"></span>
+    </div>
+    <div class="dq-status" id="dqStatus"></div>
+    <div class="content" id="content"></div>
+  </main>
+</div>
+
+<script src="data/data.js"></script>
+<script src="data/autoflows.js"></script>
+<script src="data/modules-sales-service.js"></script>
+<script src="data/modules-mkt-cs.js"></script>
+<script src="data/modules-adm-fin.js"></script>
+  <script src="data/policy-2026-08.js"></script>
+  <script src="data/modules-usedcar.js"></script>
+  <script src="data/modules-renewal.js"></script>
+  <script src="data/modules-gm.js"></script>
+<script src="assets/chart.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/views.js"></script>
+<script src="assets/views-service.js"></script>
+<script src="assets/views-sales.js"></script>
+  <script src="assets/views-sales-fin.js"></script>
+  <script src="assets/views-sales-rebate.js"></script>
+<script src="assets/views-cs.js"></script>
+<script src="assets/views-mixed.js"></script>
+<script src="assets/views-gmbrain.js"></script>
+<script src="assets/views-gmcockpit.js"></script>
+<script src="assets/views-orgloop.js"></script>
+<script src="assets/views-urgent.js"></script>
+<script src="assets/views-autoflow.js"></script>
+  <script src="assets/views-usedcar.js"></script>
+  <script src="assets/views-renewal.js"></script>
+  <script src="assets/lib/xlsx.full.min.js"></script>
+  <script src="assets/views-policy.js"></script>
+  <script src="assets/login.js"></script>
+</body>
+</html>

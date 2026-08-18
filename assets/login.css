@@ -1,0 +1,60 @@
+/* 登录页 + 登录门遮罩 样式（独立于 app.css，未登录也可加载） */
+.lg-wrap {
+  position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #0f2746 0%, #1b3a63 55%, #2a5a8f 100%);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  overflow: hidden;
+}
+.lg-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(58,148,222,.25), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(58,148,222,.18), transparent 45%);
+  pointer-events: none;
+}
+.lg-card {
+  position: relative; z-index: 2; width: 360px; max-width: 90vw;
+  background: rgba(255,255,255,.97); border-radius: 16px; padding: 36px 30px 26px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35); text-align: center;
+}
+.lg-logo {
+  width: 64px; height: 64px; margin: 0 auto 14px; border-radius: 14px;
+  background: linear-gradient(135deg,#1b3a63,#2a5a8f); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700;
+  letter-spacing: 1px;
+}
+.lg-card h1 { font-size: 19px; margin: 0 0 4px; color: #14304f; }
+.lg-sub { font-size: 12px; color: #6b7c92; margin: 0 0 22px; }
+#lgForm { display: flex; flex-direction: column; gap: 12px; }
+.lg-input {
+  height: 44px; border: 1px solid #d4dce6; border-radius: 10px; padding: 0 14px;
+  font-size: 15px; outline: none; transition: border-color .2s;
+}
+.lg-input:focus { border-color: #2a5a8f; }
+.lg-btn {
+  height: 44px; border: none; border-radius: 10px; font-size: 15px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; text-decoration: none;
+  transition: opacity .2s, transform .05s;
+}
+.lg-btn.primary { background: linear-gradient(135deg,#1b3a63,#2a5a8f); color: #fff; font-weight: 600; }
+.lg-btn.primary:hover { opacity: .92; }
+.lg-btn:active { transform: translateY(1px); }
+.lg-err { color: #d9534f; font-size: 13px; min-height: 16px; margin: 0; }
+.lg-foot { font-size: 11px; color: #9aa7b6; margin: 18px 0 0; }
+
+/* 应用内会话过期遮罩 */
+#loginGate {
+  position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #0f2746 0%, #1b3a63 55%, #2a5a8f 100%);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+#loginGate .lg-card { animation: lgpop .25s ease; }
+@keyframes lgpop { from { transform: scale(.94); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+/* 应用内退出按钮 */
+.lg-out {
+  font-size: 12px; color: #5b6b7e; background: #eef2f7; border: 1px solid #dce3ec;
+  border-radius: 8px; padding: 5px 12px; cursor: pointer; margin-left: 10px; text-decoration: none;
+}
+.lg-out:hover { background: #e3e9f1; }
+.lg-who { font-size: 12px; color: #5b6b7e; margin-left: 8px; }
